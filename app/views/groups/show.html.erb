@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Experience level:</strong>
+  <%= @group.experience_level %>
+</p>
+
+  <strong>User:</strong>
+  <%= @group.user_id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @group.event_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @group.game_id %>
+</p>
+
+<p>
+  <strong>Create date:</strong>
+  <%= @group.create_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @group.description %>
+</p>
+
+<% if @group.image? %>
+  <%= image_tag @group.image.url, class: "group-show" %>
+<% end %>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

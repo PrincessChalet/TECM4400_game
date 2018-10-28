@@ -1,3 +1,4 @@
+@import "bootstrap";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,32 @@
  *= require_tree .
  *= require_self
  */
+
+img.group-show{
+	width: 400px;
+	height: auto;
+}
+.group-box {
+	height: 600px;
+	position: relative;
+	box-shadow: 10px 10px 5px #888888;
+	background: #bdc3c7;
+	margin-bottom: 20px;
+}
+
+img.group-index{
+	height: 70%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.group-box ul {
+	list-style-type:none;
+	position: absolute;
+	bottom: 0;
+}
+
+
+.group-box li:first-child {
+	font-size: 24px;
+}

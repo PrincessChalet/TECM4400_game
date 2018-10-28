@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  experience_level: MyString
+  user_id: 1
+  event_id: 1
+  game_id: 1
+  create_date: 2018-10-27 13:13:32
+
+two:
+  name: MyString
+  experience_level: MyString
+  user_id: 1
+  event_id: 1
+  game_id: 1
+  create_date: 2018-10-27 13:13:32

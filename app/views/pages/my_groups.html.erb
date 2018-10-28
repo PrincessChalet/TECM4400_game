@@ -1,0 +1,30 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h1> My Groups </h1>
+@groups = group.where(user: current_user)
+<% @groups.each do |group| %>
+  <div class="col=md-4">
+    <div class="group-box">
+      <% if group.image? %>
+        <%= link_to (image_tag group.image.url, class: "group-index"), group %>
+      <% end %>
+      <ul>
+      <li><%= group.name %></li>
+      <li><%= group.experience_level %><li>
+     <li><%= group.user_id %></li>
+      <th><%= group.event_id %></li>
+      <li><%= group.game_id %></li>
+      <li><%= group.description %></li>
+      <li><%= group.create_date %></li>
+      
+      <%= link_to 'Show', group %>
+      <%= link_to 'Edit', edit_group_path(group) %>
+      <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </ul>
+    </div>
+    <br>
+    <% end %>
+</div>
+<br>
+
+</div>
