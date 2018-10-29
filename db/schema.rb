@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2018_10_27_192002) do
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "experience_level"
-    t.integer "user_id"
     t.integer "event_id"
     t.integer "game_id"
     t.datetime "create_date"
@@ -23,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_10_27_192002) do
     t.datetime "updated_at", null: false
     t.text "description"
     t.string "image"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

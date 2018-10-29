@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
@@ -41,24 +41,32 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1
   # PATCH/PUT /groups/1.json
   def update
-    respond_to do |format|
-      if @group.update(group_params)
-        format.html { redirect_to @group, notice: 'Group was successfully updated.' }
-        format.json { render :show, status: :ok, location: @group }
-      else
-        format.html { render :edit }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
+    if @group.user == current_user
+      respond_to do |format|
+        if @group.update(group_params)
+          format.html { redirect_to @group, notice: 'Group was successfully updated.' }
+          format.json { render :show, status: :ok, location: @group }
+        else
+          format.html { render :edit }
+          format.json { render json: @group.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      wrong_user_error
     end
   end
 
   # DELETE /groups/1
   # DELETE /groups/1.json
   def destroy
-    @group.destroy
-    respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
-      format.json { head :no_content }
+    if @recipe.user == current_user
+      @group.destroy
+      respond_to do |format|
+        format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      wrong_user_error
     end
   end
 
@@ -71,5 +79,12 @@ class GroupsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
       params.require(:group).permit(:remove_image, :image, :name, :experience_level, :user_id, :event_id, :game_id, :create_date, :description)
+    end
+
+    def wrong_user_error
+      respond_to do |format|
+        format.html{redirect_to pages_my_groups_path, notice: "You can't edit this group!"}
+        format.json { head :no_content }
+      end
     end
 end

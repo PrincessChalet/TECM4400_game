@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
 
 def my_groups
-	@user_groups = current_user.groups
+	@groups = Group.where(user: current_user)
+	render "groups/index"
 end
 
 end
