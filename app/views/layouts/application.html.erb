@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <nav class="navbar navbar-dark bg-dark">
+   <!-- <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand"
     <%= link_to 'Home', welcome_index_path%></a>
     <% if user_signed_in? %>
@@ -16,9 +16,26 @@
       <li><%= link_to 'Sign out',  destroy_user_session_path%></li>
   </div>
     <% end %>
-    </nav>
+    </nav>-->
     
-    <title>GameApp</title>
+    <nav role='navigation'>
+			<h1>tableplace</h1>
+		  <div id="menuToggle">
+		    <input type="checkbox" />
+		    <span></span>
+		    <span></span>
+		    <span></span>
+		    <ul id="menu">
+		      <a href="#"><li>my profile</li></a>
+		      <a href="#"><li>my groups</li></a>
+		      <a href="#"><li>find friends</li></a>
+		      <a href="#"><li>my friends</li></a>
+		      <a href="#"><li>log out</li></a>
+		    </ul>
+		  </div>
+		</nav>
+    
+    <title>tableplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
