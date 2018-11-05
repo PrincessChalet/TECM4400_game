@@ -1,4 +1,4 @@
-<h1>Welcome</h1>
+<!--<h1>Welcome</h1>
 <div class="btn btn-secondary btn-lg btn-block">
 <%= link_to 'Groups', groups_path %>
 </div>
@@ -8,4 +8,23 @@
 <% else %>
   <%= link_to('Login', new_user_session_path)  %>  
 <% end %>
-</div>
+</div>-->
+
+
+<body>
+		<div class="container">
+			<h1>tableplace</h1>
+			<div class="box_container_container">
+				<div class="box_container">
+					<div class="group_box">
+						<h3><%= link_to 'create group', groups_path %></h3>
+					</div><!--group_box-->
+				</div><!--box_container-->
+				<div class="box_container">
+					<div class="group_box">
+						<h3><%= link_to 'join group', groups_path %></h3>   <!-- CHANGE PATH!!!! -->
+					</div><!--group_box-->
+				</div><!--box_container-->
+			</div><!--box_container_container-->
+		</div><!--container-->
+	</body>
