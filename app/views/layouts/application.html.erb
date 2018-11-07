@@ -19,7 +19,7 @@
     </nav>-->
     
     <nav role='navigation'>
-			<h1>tableplace</h1>
+			<h1><%= link_to "tableplace", welcome_index_path %></h1> 
 		  <div id="menuToggle">
 		    <input type="checkbox" />
 		    <span></span>
@@ -27,10 +27,15 @@
 		    <span></span>
 		    <ul id="menu">
 		      <a href="#"><li>my profile</li></a>
-		      <a href="#"><li>my groups</li></a>
+		      <a href="#"><li><%= link_to "my groups", groups_path %></li></a>
 		      <a href="#"><li>find friends</li></a>
 		      <a href="#"><li>my friends</li></a>
-		      <a href="#"><li>log out</li></a>
+          <% if !user_signed_in? %>
+            <a href="#"><li><%= link_to 'log in',  new_user_session_path%></li></a>
+          <% end %>
+		      <% if user_signed_in? %>
+            <a href="#"><li><%= link_to 'log out',  destroy_user_session_path%></li></a>
+          <% end %>
 		    </ul>
 		  </div>
 		</nav>
