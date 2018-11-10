@@ -2,8 +2,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Groups</h1>
-<button type="button" class="btn btn-secondary btn-sm">
-  <%= link_to 'Create New Group', new_group_path%></button>
+  <div class="box_container_container">
+        <div class="box_container">
+          <div class="group_box">
+          <h3><%= link_to 'Create New Group', new_group_path%></h3>
+          </div><!--group_box-->
+        </div><!--box_container-->
+      </div><!--box_container_container-->
    <div class="row">
   <% @groups.each do |group| %>
   <div class="col=md-4">

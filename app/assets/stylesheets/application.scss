@@ -256,6 +256,32 @@ a:hover
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
+.sign_up_container {
+	display: flex;
+	flex-direction: vertical;
+	align-items: center;
+	justify-content: center;
+	margin: 20px auto;
+	width: 100%;
+}
+.sign_up_container .actions {
+	text-align: center;
+}
+.sign_up_container .field {
+	margin: 10px;
+	text-align: center;
+}
+.sign_up_container label {
+	font-size: 20px;
+	padding-top: 15px;
+}
+#user_remember_me {
+	margin-right: 5px;
+}
+.sign_up_forgot {
+	text-align: center;
+}
+
 /*navbar*/
 
 /*
