@@ -20,9 +20,10 @@
       <li><%= group.create_date %></li>
       
       <button type="button" class="btn btn-secondary btn-sm">
-  <%= link_to 'Join Group', new_group_path%></button>
+  <%= link_to 'Join Group', join_group_path(group)%></button>
   
-  <% if (user_signed_in? && (current_user.id == @group.user_id)) %>
+  <!-- only show these buttons if the user created the group-->
+ <% if (user_signed_in? && (current_user.id == group.user_id)) %>
       <%= link_to 'Show', group %>
       <%= link_to 'Edit', edit_group_path(group) %>
       <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>

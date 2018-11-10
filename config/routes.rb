@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :memberships
   get 'welcome/index'
   resources :groups
   devise_for :users, controllers: { sessions: 'users/sessions' }
@@ -7,6 +8,9 @@ Rails.application.routes.draw do
   get 'pages/my_groups'
 devise_scope :user do
   get 'users/sign_out' =>'users/sessions#destroy'
+end
+resources :groups do
+    get 'join', :on => :member
 end
 
 end
