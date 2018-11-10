@@ -70,6 +70,19 @@ class GroupsController < ApplicationController
     end
   end
 
+def join
+    @group = Group.find(params[:id])
+    @membership = @group.memberships.build(:user_id => current_user.id)
+    respond_to do |format|
+      if @membership.save
+        format.html { redirect_to(@group, :notice => 'You have joined this group.') }
+        format.xml  { head :ok }
+      else
+        format.html { redirect_to(@group, :notice => 'Join error.') }
+        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_group
