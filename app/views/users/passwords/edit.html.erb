@@ -1,5 +1,6 @@
-<h2>Change your password</h2>
-
+<div class="container">
+  <h1>Change your password</h1>
+<div class="sign_up_container">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
@@ -21,5 +22,6 @@
     <%= f.submit "Change my password" %>
   </div>
 <% end %>
-
-<%= render "users/shared/links" %>
+</div><!--sign_up_container-->
+  <%= render "users/shared/links" %>
+</div><!--container
