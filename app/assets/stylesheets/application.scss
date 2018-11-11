@@ -19,7 +19,7 @@ html {
 	width: 100%;
 }
 body {
-	background: #161B31;
+	background: #4E414B;
 	color: #D0CCDB;
 	overflow-x: hidden;
 	width: 100%;
@@ -72,7 +72,11 @@ body {
 .box_container_container {
 	margin: 55px auto;
 	display: block;
-
+	width: 600px;
+	height: auto;
+	background: #658A5E;
+	border: solid #CFD18E;
+	border-radius: 15px;
 }
 .box_container {
 	display: flex;
@@ -82,7 +86,7 @@ body {
 	margin: 70px auto;
 	height: 130px;
 	width: 300px;
-	background: #D0CCDB;
+	background: #F0F0F6;
 	color: #333233;
 	border-radius: 10px;
 }
@@ -101,7 +105,6 @@ body {
 	text-align: center;
 	padding: 5%;
 	font-size: 70px;
-	text-shadow: 2px 2px 2px black;
 }
 
 
@@ -127,7 +130,7 @@ body {
 /*navbar*/
 nav {
 	width: 100%;
-	background-color: #7D6B65;
+	background-color: #D36C5F;
 }
 nav h1 {
 	padding: 30px;
@@ -136,15 +139,11 @@ nav h1 {
 nav a
 {
   text-decoration: none;
-  color: #161B31;
-  
-  transition: color 0.3s ease;
-}
-
-a:hover
-{
   color: #E2F9D5;
-  text-decoration: none;
+}
+nav a:hover {
+	text-decoration: none;
+	color: #E2F9D5;
 }
 
 #menuToggle
@@ -229,13 +228,13 @@ a:hover
 {
   position: absolute;
   width: 400px;
-  height: 100%;
+  height: 110%;
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
   right: -100px;
   
-  background: #D0CCDB;
+  background: #CFD18E;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   
@@ -249,7 +248,14 @@ a:hover
   padding: 10px 0;
   font-size: 22px;
 }
-
+#menuToggle a {
+	text-decoration: none;
+	color: #161B31;
+  	transition: color 0.3s ease;
+}
+#menuToggle a:hover {
+	color: #E2F9D5;
+}
 
 #menuToggle input:checked ~ ul
 {
@@ -262,7 +268,11 @@ a:hover
 	align-items: center;
 	justify-content: center;
 	margin: 20px auto;
-	width: 100%;
+	width: 300px;
+	padding-bottom: 50px;
+	background: #658A5E;
+	border: solid #CFD18E;
+	border-radius: 15px;
 }
 .sign_up_container .actions {
 	text-align: center;
@@ -280,6 +290,9 @@ a:hover
 }
 #user_remember_me {
 	margin-right: 5px;
+}
+#user_remember_me input:checked {
+	background-color: red;
 }
 .sign_up_forgot {
 	text-align: center;
