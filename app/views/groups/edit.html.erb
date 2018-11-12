@@ -1,6 +1,9 @@
-<h1>Editing Group</h1>
+<div class="container">
+	<h1>Editing Group</h1>
+<div class="new_group">
+	<%= render 'form', group: @group %>
 
-<%= render 'form', group: @group %>
-
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+	<%= link_to 'Show', @group %> |
+	<%= link_to 'Back', groups_path %>
+</div><!--new_group-->
+</div><!--container-->

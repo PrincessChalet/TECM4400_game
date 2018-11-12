@@ -25,6 +25,12 @@ body {
 	width: 100%;
 	height: 100%;
 }
+p {
+	color: #E2F9D5;
+}
+a {
+	color: #CFD18E;
+}
 #home h1 {
 	color: #E2F9D5;
 	text-align: center;
@@ -99,6 +105,12 @@ body {
 		text-decoration: none;
 		color: #333233;
 	}
+.new_group {
+	padding: 45px;
+	background: #658A5E;
+	border: solid #CFD18E;
+	border-radius: 15px;
+}
 
 .container h1 {
 	color: #E2F9D5;
@@ -106,7 +118,13 @@ body {
 	padding: 5%;
 	font-size: 70px;
 }
-
+.image img {
+	display: cover;
+	max-width: 500px;
+	max-height: 500px;
+	border: solid #CFD18E;
+	border-radius: 15px;
+}
 
 
 
@@ -300,33 +318,49 @@ nav a:hover {
 
 /*navbar*/
 
-/*
+
 img.group-show{
 	width: 400px;
 	height: auto;
 }
 .group-box {
-	height: 600px;
-	position: relative;
-	box-shadow: 10px 10px 5px #888888;
-	background: #bdc3c7;
-	margin-bottom: 20px;
+	padding: 45px;
+	background: #658A5E;
+	border: solid #CFD18E;
+	border-radius: 15px;
+	display: inline-flex;
+	align-items: center;
+	line-height: 35px;
+	width: 1150px;
+	margin: 0 auto;
+}
+.group-box p {
+	display: inline-block;
+	padding: 30px;
+}
+#join {
+	padding-left: 0;
+}
+.group-box p a {
+	color: #CFD18E;
 }
 
 img.group-index{
-	height: 70%;
-	width: 100%;
-	object-fit: cover;
+	display: cover;
+	max-width: 500px;
+	max-height: 500px;
+	border: solid #CFD18E;
+	border-radius: 15px;
 }
 
 .group-box ul {
-	list-style-type:none;
-	position: absolute;
-	bottom: 0;
+	list-style-type: none;
+	max-width: 500px;
 }
 
 
 .group-box li:first-child {
 	font-size: 24px;
+	font-weight: 700;
+	color: #CFD18E;
 }
-*/
