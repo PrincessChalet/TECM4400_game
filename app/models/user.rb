@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :memberships, :dependent => :destroy 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
-  attr_accessor :login
+  attr_accessor :login, :username
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, 
          :validatable, authentication_keys: [:login]
