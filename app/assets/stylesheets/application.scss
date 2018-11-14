@@ -97,13 +97,16 @@ a {
 	border-radius: 10px;
 }
 .group_box h3 {
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
 	line-height: 120px;
 }
 	.group_box h3 a {
 		text-decoration: none;
 		color: #333233;
+		display: block;
+		height: 130px;
+		width: 300px;
 	}
 .new_group {
 	padding: 45px;
