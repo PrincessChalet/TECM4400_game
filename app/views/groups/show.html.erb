@@ -1,48 +1,54 @@
 <div class="container">
   <h1>Your Group</h1>
-  <div class="new_group">
-    <p id="notice"><%= notice %></p>
+  <div class="new_group_container">
+    <div class="new_group">
+      <p id="notice"><%= notice %></p>
+      <div class="image">
+        <% if @group.image? %>
+          <%= image_tag @group.image.url, class: "group-show" %>
+        <% end %>
+      </div><!--image-->
+      <div class="group_info">
+        <p>
+          <strong>Name:</strong>
+          <%= @group.name %>
+        </p>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @group.name %>
-    </p>
+        <p>
+          <strong>Experience level:</strong>
+          <%= @group.experience_level %>
+        </p>
 
-    <p>
-      <strong>Experience level:</strong>
-      <%= @group.experience_level %>
-    </p>
+        <p>
+          <strong>User:</strong>
+          <%= @group.user_id %>
+        </p>
 
-    <p>
-      <strong>User:</strong>
-      <%= @group.user_id %>
-    </p>
+        <p>
+          <strong>Event:</strong>
+          <%= @group.event_id %>
+        </p>
 
-    <p>
-      <strong>Event:</strong>
-      <%= @group.event_id %>
-    </p>
+        <p>
+          <strong>Game:</strong>
+          <%= @group.game_id %>
+        </p>
 
-    <p>
-      <strong>Game:</strong>
-      <%= @group.game_id %>
-    </p>
+        <p>
+          <strong>Create date:</strong>
+          <%= @group.create_date %>
+        </p>
 
-    <p>
-      <strong>Create date:</strong>
-      <%= @group.create_date %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @group.description %>
-    </p>
-    <div class="image">
-      <% if @group.image? %>
-        <%= image_tag @group.image.url, class: "group-show" %>
-      <% end %>
-    </div><!--image-->
-  </div><!--new_group-->
-  <%= link_to 'Edit', edit_group_path(@group) %> |
-  <%= link_to 'Back', groups_path %>
+        <p>
+          <strong>Description:</strong>
+          <%= @group.description %>
+        </p>
+      </div><!--group_info-->
+    
+    </div><!--new_group-->
+  </div><!--new_group_container-->
+  <div class="edit_back">
+    <%= link_to 'Edit', edit_group_path(@group) %> |
+    <%= link_to 'Back', groups_path %>
+  </div><!--edit_back-->
 </div><!--container-->
