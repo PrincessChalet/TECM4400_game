@@ -41,14 +41,18 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1
   # PATCH/PUT /groups/1.json
   def update
+    
+ # @group = Group.find(params[:id])
+  #@user = User.find(params[:user_id])
+  #@group.users << @user unless @group.users.include? @user
     if @group.user == current_user
-      respond_to do |format|
-        if @group.update(group_params)
+     respond_to do |format|
+      if @group.update(group_params)
           format.html { redirect_to @group, notice: 'Group was successfully updated.' }
           format.json { render :show, status: :ok, location: @group }
         else
-          format.html { render :edit }
-          format.json { render json: @group.errors, status: :unprocessable_entity }
+         format.html { render :edit }
+         format.json { render json: @group.errors, status: :unprocessable_entity }
         end
       end
     else
@@ -59,7 +63,7 @@ class GroupsController < ApplicationController
   # DELETE /groups/1
   # DELETE /groups/1.json
   def destroy
-    if @recipe.user == current_user
+    if @group.user == current_user
       @group.destroy
       respond_to do |format|
         format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
@@ -70,6 +74,11 @@ class GroupsController < ApplicationController
     end
   end
 
+  #def join
+  #  @group = Group.find(params[:id])
+  #  current_user.update_attribute(:group_ids, @group.id)
+  #  redirect_to @group
+  #end
 def join
     @group = Group.find(params[:id])
     @membership = @group.memberships.build(:user_id => current_user.id)

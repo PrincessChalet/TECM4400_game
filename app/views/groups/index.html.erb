@@ -19,14 +19,12 @@
       <ul>
       <li><%= group.name %></li>
       <li><%= group.experience_level %><li>
-      <th><%= group.event_id %></li>
-      <li><%= group.game_id %></li>
       <li><%= group.description %></li>
       <li><%= group.create_date %></li>
       
-      
-  <p id="join"><%= link_to 'Join Group', join_group_path(group)%></p>|
-  
+  <% if (user_signed_in?) %>  
+  <p id="join"><%= link_to "Join this group", join_group_path(group) %></p>
+  <%end%>
   <!-- only show these buttons if the user created the group-->
  <% if (user_signed_in? && (current_user.id == group.user_id)) %>
       <p><%= link_to 'View', group %></p>|

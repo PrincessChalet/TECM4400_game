@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+  <% if user_signed_in? %>
+   <% if current_user.groups.include?(@group) %>
+       You're already a member of this group!
+   <% else %>
+      <%= form_for [@group, @membership] do |f| %>
+         <%= f.submit "Join" %>
+      <% end %>
+   <% end %>
+<% end %>
+
   <div class="field">
     <%= form.label :user_id %>
     <%= form.number_field :user_id %>

@@ -1,28 +1,16 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-
-<h1>My Groups</h1>
-  <div class="row">
-  <% @groups.each do |group| %>
-  <div class="col-md-4">
-     <div class="group-box">
-      <% if group.image? %>
-       <%= link_to (image_tag group.image.url, class: "group-index"), group %>
-      <% end %>
-      
-       <ul>
-       <li><%= group.user.username %> </li>
-      <li><%= group.title %></li>
-      <li><%= group.description %></li>
-      <li><%= link_to 'Show', group, class: "btn btn-dark" %>
-      <%= link_to 'Edit', edit_group_path(group), class: "btn btn-dark" %>
-      <%= link_to 'Delete', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-dark" %> </li>
-      </ul>
-    </div>  
-    <br>
-   </div>
-  <% end %>
-</div> <!--/row-->
-<br>
-
+<%= Group.all.each do |each_group| %> 
+<div style = "width: 400px; height: 200px; color: #ff00ff;"> 
+  <%= each_group.name %>
+  <%= each_group.user_id %>
+  <%= link_to "Join this group", join_group_path(each_group) %>`
+   <br />
 </div>
+<% end %>
+
+<%= User.all.each do |each_user| %> 
+<div style = "width: 400px; height: 200px; color: #ff00ff;"> 
+  <%= each_user.email %> 
+  <%= link_to "Join this group", join_group_path(each_user) %>`
+   <br />
+</div>
+<% end %>

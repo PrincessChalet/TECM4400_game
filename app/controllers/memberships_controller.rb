@@ -1,6 +1,6 @@
 class MembershipsController < ApplicationController
   before_action :set_membership, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
   # GET /memberships
   # GET /memberships.json
   def index
@@ -14,7 +14,8 @@ class MembershipsController < ApplicationController
 
   # GET /memberships/new
   def new
-    @membership = Membership.new
+    @group = Group.find params[:group_id]
+      @membership = Membership.new({group: group})
   end
 
   # GET /memberships/1/edit
@@ -24,17 +25,19 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.json
   def create
+    @group = Group.find params[:group_id]
+      @membership = Membership.new(membership_params)
     #@membership = Membership.new(membership_params)
-    @membership = current_user.memberships.build(:group_id => params[:group_id])
-    respond_to do |format|
-      if @membership.save
-        format.html { redirect_to @membership, notice: 'Membership was successfully created.' }
-        format.json { render :show, status: :created, location: @membership }
-      else
-        format.html { render :new }
-        format.json { render json: @membership.errors, status: :unprocessable_entity }
-      end
-    end
+    #@membership = current_user.memberships.build(:group_id => params[:group_id])
+    #respond_to do |format|
+     # if @membership.save
+      #  format.html { redirect_to @membership, notice: 'Membership was successfully created.' }
+      #  format.json { render :show, status: :created, location: @membership }
+      #else
+      #  format.html { render :new }
+      #  format.json { render json: @membership.errors, status: :unprocessable_entity }
+      #end
+    #end
   end
 
   # PATCH/PUT /memberships/1
@@ -70,6 +73,7 @@ class MembershipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def membership_params
-      params.require(:membership).permit(:user_id, :group_id)
+      #params.require(:membership).permit(:user_id, :group_id)
+      params.require(:membership).merge(group_id: params[:group_id], user_id: current_user.id)
     end
 end
