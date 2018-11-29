@@ -281,7 +281,7 @@ nav a:hover {
 {
   position: absolute;
   width: 400px;
-  height: 110%;
+  height: 1500px;
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
@@ -411,8 +411,23 @@ img.group-show{
 	padding: 30px;
 }
 #join {
-	padding-left: 0;
+	padding: 0;
 }
+	#join a {
+		border: none;
+		border-radius: 4px;
+		background: #3E345D;
+		color: #fff;
+		height: 50px;
+		width: 130px;
+		margin: 20px 0;
+		padding: 13px;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+		#join a:hover {
+			background-color: #5f5287;
+		}
 .group-box p a {
 	color: #3E345D;
 }
@@ -428,7 +443,7 @@ img.group-index{
 .group-box ul {
 	list-style-type: none;
 	max-width: 500px;
-	color: #8D939E;
+	color: #383a3f;
 }
 
 
@@ -436,4 +451,7 @@ img.group-index{
 	font-size: 24px;
 	font-weight: 700;
 	color: #3E345D;
+}
+.group-box li:nth-of-type(2) {
+	font-weight: 700;
 }
