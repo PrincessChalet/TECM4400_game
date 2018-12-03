@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_020332) do
+ActiveRecord::Schema.define(version: 2018_11_26_223526) do
+
+  create_table "events", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "group_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -44,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_020332) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

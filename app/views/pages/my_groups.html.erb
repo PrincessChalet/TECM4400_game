@@ -1,16 +1,42 @@
-<%= Group.all.each do |each_group| %> 
-<div style = "width: 400px; height: 200px; color: #ff00ff;"> 
-  <%= each_group.name %>
-  <%= each_group.user_id %>
-  <%= link_to "Join this group", join_group_path(each_group) %>`
-   <br />
-</div>
-<% end %>
+<div class="container">
+<p id="notice"><%= notice %></p>
 
-<%= User.all.each do |each_user| %> 
-<div style = "width: 400px; height: 200px; color: #ff00ff;"> 
-  <%= each_user.email %> 
-  <%= link_to "Join this group", join_group_path(each_user) %>`
-   <br />
+<h1> Your Groups </h1>
+<div class="row">
+<%= Group.all.each do |each_group| %> 
+<div class="group_container">
+  <div class="group-box">
+    <% if each_group.image? %>
+        <%= link_to (image_tag each_group.image.url, class: "group-index"), each_group %>
+      <% end %>
+      <ul>
+      <li>Name: <%= each_group.name %></li>
+      <li>Experience Level: <%= each_group.experience_level %></li>
+      <li>User_id: <%= each_group.user_id %></li>
+      <li>create date: <%= each_group.create_date %></li>
+      <li>description: <%= each_group.description %></li>
+      <li><%= link_to "Join this group", join_group_path(each_group) %>`</li>
+       <br />
+     </ul>
+    </div>
+    <% end %>
+  </div>
 </div>
-<% end %>
+</div>
+
+<div class="row">
+<%= User.all.each do |each_user| %> 
+  <div class="group_container">
+    <div class="group-box">
+      <ul>
+      <li><%= each_user.email %></li>
+      <li><%= each_user.created_at %></li>
+      <li><%= each_user.username %></li>    
+      </ul>
+       <br />
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>

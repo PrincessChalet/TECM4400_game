@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Profile</h1>
+
+  <div class="new_group_container">
+    <div class="new_group">
+      <p id="notice"><%= notice %></p>
+      <div class="image">
+        <% if @users.image? %>
+          <%= link_to (image_tag user.image.url, class: "group-index"), user %>
+        <% end %>
+      </div><!--image-->
+      <div class="group_info">
+        <p>
+          <strong>username:</strong>
+          <%= @users.username %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @users.email %>
+        </p>
+      </div><!--group_info-->

@@ -3,7 +3,7 @@
   <head>
     <title>tableplace</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%= csrf_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +16,7 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="#"><li>my profile</li></a>
+          <a href="#"><li><%= link_to "my profile", pages_profile_path %></a>
           <a href="#"><li><%= link_to "my groups", pages_my_groups_path %></li></a>
           <!--<a href="#"><li>find friends</li></a>
           <a href="#"><li>my friends</li></a>-->

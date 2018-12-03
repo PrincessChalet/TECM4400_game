@@ -3,6 +3,15 @@
 <div class="sign_up_container">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
+
+  <div class ="form-control-group">
+    <%= f.file_field :image %>
+    <% if @user.image? %>
+      <%= image_tag @user.image.url, class: "group-show" %>
+      <%= f.check_box :remove_image %>
+        Remove Image
+      <% end %>
+  </div>
     <div class="field">
       <%= f.label :username %><br />
       <%= f.text_field :username, autofocus: true, autocomplete: "username" %>

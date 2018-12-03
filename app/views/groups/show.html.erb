@@ -35,6 +35,21 @@
         </p>
       </div><!--group_info-->
     
+         Events
+        </h1>
+        <% @events.each do |event| %>
+
+        <h5>
+          <ul>
+          <li><%= event.name %></li>
+          <li><%= event.description %></li>
+          <li><%= event.start %></li>
+          <li><%= event.end %></li>
+
+        <% end %>
+        </h5>
+
+
     </div><!--new_group-->
   </div><!--new_group_container-->
   <div class="edit_back">
@@ -42,3 +57,5 @@
     <%= link_to 'Back', groups_path %>
   </div><!--edit_back-->
 </div><!--container-->
+
+<%= link_to 'Create Event', new_group_event_path(@group) %><br>

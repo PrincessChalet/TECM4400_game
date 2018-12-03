@@ -1,8 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_many :events
   has_many :memberships
-   has_many :groups, through: :memberships
+  has_many :groups, through: :memberships
+  mount_uploader :image, ImageUploader
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login, :username
