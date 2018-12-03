@@ -1,6 +1,7 @@
 class MembershipsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_membership, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  
   # GET /memberships
   # GET /memberships.json
   def index
