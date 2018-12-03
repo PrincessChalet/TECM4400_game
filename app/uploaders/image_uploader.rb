@@ -1,4 +1,5 @@
 class ImageUploader < CarrierWave::Uploader::Base
+if Rails.env.production?
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
@@ -44,4 +45,5 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+end
 end
