@@ -12,4 +12,7 @@ def profile
 	render "pages/profile"
 end
 
+def info
+end
+
 end

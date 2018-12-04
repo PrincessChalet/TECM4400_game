@@ -43,10 +43,10 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1.json
   def update
     
- # @group = Group.find(params[:id])
+ @group = Group.find(params[:id])
   #@user = User.find(params[:user_id])
   #@group.users << @user unless @group.users.include? @user
-    if @group.user == current_user
+   # if @group.user == current_user
      respond_to do |format|
       if @group.update(group_params)
           format.html { redirect_to @group, notice: 'Group was successfully updated.' }
@@ -56,9 +56,7 @@ class GroupsController < ApplicationController
          format.json { render json: @group.errors, status: :unprocessable_entity }
         end
       end
-    else
-      wrong_user_error
-    end
+    
   end
 
   # DELETE /groups/1
@@ -101,7 +99,7 @@ def join
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:remove_image, :image, :name, :experience_level, :user_id, :event_id, :game_id, :create_date, :description)
+      params.require(:group).permit(:remove_image, :image, :name, :experience_level, :user_id, :event_id, :game_id, :create_date, :description, :catageory)
     end
 
     def wrong_user_error
