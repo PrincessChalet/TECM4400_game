@@ -22,6 +22,7 @@
           <a href="#"><li>my friends</li></a>-->
           <% if !user_signed_in? %>
             <a href="#"><li><%= link_to 'log in',  new_user_session_path%></li></a>
+            <a href="#"><li><%= link_to 'sign up',  new_user_session_path%></li></a>
           <% end %>
           <% if user_signed_in? %>
             <a href="#"><li><%= link_to 'log out',  destroy_user_session_path%></li></a>
@@ -31,6 +32,6 @@
     </nav>
 
   <body>
-    <%= yield %>
+    <%= yield %> 
   </body>
 </html>
