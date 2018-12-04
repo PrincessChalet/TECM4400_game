@@ -42,7 +42,7 @@ a {
 .hero {
 	height: 650px;
 	width: 100%;
-	background-image: linear-gradient(0deg,rgba(255,255,255,0.7),rgba(90,112,237,0.4)), url("TECM4400_game/images/game_hero_image.jpg");
+	background-image: linear-gradient(0deg,rgba(255,255,255,0.7),rgba(90,112,237,0.4)), url(game_hero_image.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	margin-bottom: 40px;
@@ -79,17 +79,13 @@ a {
 		text-decoration: none;
 		font-size: 20px;
 		text-align: center;
-		color: #000;
-		border: solid 2px #3E345D;
+		background: #5f5287;
+		color: #fff;
+		border: solid 2px #5f5287;
 		border-radius: 8px;
 		width: 50px;
 		height: 30px;
-		transition: 0.3s ease;
 	}
-		.top_log_sign_links a:hover {
-			background: #3E345D;
-			color: #fff;
-		}
 .row img {
 	height: 380px;
 	width: 660px;
@@ -533,6 +529,7 @@ img.group-show{
 .group_container {
 	display: block;
 	margin: 0 auto;
+	width: 1050px;
 }
 .group-box {
 	padding: 10px;
