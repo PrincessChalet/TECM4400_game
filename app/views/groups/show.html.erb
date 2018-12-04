@@ -3,12 +3,12 @@
   <div class="new_group_container">
     <div class="new_group">
       <p id="notice"><%= notice %></p>
+      <div class="group_info">
       <div class="image">
         <% if @group.image? %>
           <%= image_tag @group.image.url, class: "group-show" %>
         <% end %>
       </div><!--image-->
-      <div class="group_info">
         <p>
           <strong>Name:</strong>
           <%= @group.name %>
