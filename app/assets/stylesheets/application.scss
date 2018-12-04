@@ -534,6 +534,7 @@ img.group-show{
 .group-box {
 	padding: 10px;
 	background: #F0F0F6;
+	border: solid 3px #d8d3e8;
 	border-radius: 10px;
 	display: inline-flex;
 	justify-content: center;
@@ -542,10 +543,34 @@ img.group-show{
 	width: 1050px;
 	margin: 30px auto;
 }
-.group-box p {
-	display: inline-block;
-	padding: 30px;
-}
+	.group-box p {
+		display: inline-block;
+		padding: 30px;
+	}
+	.group-box ul {
+		width: 500px;
+	}
+	.group-box li:first-child {
+		margin-top: 20px;
+	}
+	.group-box li:nth-child(6) {
+		margin-bottom: 35px;
+	}
+	.group-box a {
+		border: none;
+		border-radius: 4px;
+		background: #3E345D;
+		color: #fff;
+		height: 50px;
+		width: 130px;
+		margin: 20px 0;
+		padding: 13px;
+		text-decoration: none;
+		transition: 0.3s ease;
+	}
+		.group-box a:hover {
+			background-color: #5f5287;
+		}
 #join {
 	padding: 0;
 }
@@ -559,7 +584,7 @@ img.group-show{
 		margin: 20px 0;
 		padding: 13px;
 		text-decoration: none;
-		transition: color 0.3s ease;
+		transition: 0.3s ease;
 	}
 		#join a:hover {
 			background-color: #5f5287;
