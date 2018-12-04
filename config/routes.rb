@@ -18,6 +18,7 @@ end
 #resources :groups do
  #   get 'join', :on => :member
 #end
+
 resources :groups, only: [:show], shallow: true do
    resources :memberships, only: [:new] #-> domain.com/2/memberships/new
 end

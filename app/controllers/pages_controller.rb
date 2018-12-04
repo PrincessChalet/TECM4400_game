@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
 def my_groups
 	@groups = Group.where(user: current_user)
+	
 	#@groups = current_user.groups
 	render "pages/my_groups"
 end
