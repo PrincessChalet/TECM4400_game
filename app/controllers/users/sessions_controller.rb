@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
-  before_action :configure_sign_in_params, only: [:create]
+  before_action :configure_sign_in_params, only: [:create, :edit]
 
   # GET /resource/sign_in
    def new
@@ -27,7 +27,9 @@ class Users::SessionsController < Devise::SessionsController
     yield if block_given?
     respond_to_on_destroy
    end
-
+def edit
+    @user = current_user
+  end
    protected
 
   # If you have extra params to permit, append them to the sanitizer.

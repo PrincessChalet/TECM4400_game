@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   get 'pages/profile'
 devise_scope :user do
   get 'users/sign_out' =>'users/sessions#destroy'
+  get 'users/edit' => 'users/sessions#edit'
 end
- resources :users, only: [:show]
+ resources :users, only: [:show, :edit]
 #resources :groups do
  #   get 'join', :on => :member
 #end
