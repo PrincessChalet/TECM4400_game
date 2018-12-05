@@ -6,7 +6,7 @@
       <p id="notice"><%= notice %></p>
       <div class="image">
         <% if @users.image? %>
-          <%= link_to (image_tag user.image.url, class: "group-index"), user %>
+          <%= link_to (image_tag @users.image.url, class: "group-index"), @users %>
         <% end %>
       </div><!--image-->
       <div class="group_info">
