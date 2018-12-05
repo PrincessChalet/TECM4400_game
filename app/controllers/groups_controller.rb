@@ -99,7 +99,7 @@ def join
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:remove_image, :image, :name, :experience_level, :user_id, :event_id, :game_id, :create_date, :description, :catageory)
+      params.require(:group).permit(:remove_image, :image, :name, :experience_level, :user_id, :event_id, :game_id, :description, :catageory)
     end
 
     def wrong_user_error
