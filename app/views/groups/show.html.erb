@@ -3,12 +3,12 @@
   <div class="new_group_container">
     <div class="new_group">
       <p id="notice"><%= notice %></p>
+      <div class="group_info">
       <div class="image">
         <% if @group.image? %>
           <%= image_tag @group.image.url, class: "group-show" %>
         <% end %>
       </div><!--image-->
-      <div class="group_info">
         <p>
           <strong>Name:</strong>
           <%= @group.name %>
@@ -22,11 +22,6 @@
         <p>
           <strong>User:</strong>
           <%= @group.user_id %>
-        </p>
-        
-        <p>
-          <strong>Category:</strong>
-          <%= @group.catageory %>
         </p>
         
         <p>
@@ -61,6 +56,7 @@
     <%= link_to 'Edit', edit_group_path(@group) %> |
     <%= link_to 'Back', groups_path %>
   </div><!--edit_back-->
+  <div class="create_event">
+    <%= link_to 'Create Event', new_group_event_path(@group) %>
+  </div><!--create_event-->
 </div><!--container-->
-
-<%= link_to 'Create Event', new_group_event_path(@group) %><br>

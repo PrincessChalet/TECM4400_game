@@ -9,12 +9,20 @@
 	<div class="hero">
 		<h2>Set up your next tabletop adventure</h2>
 		<div class="hero_right_content">
+<<<<<<< HEAD
 			<% if !user_signed_in? %>
+=======
+		<% if user_signed_in? %>
+>>>>>>> 1cd33fa1674ad4387f38c22e84635f7a87ec2f36
 			<div class="top_log_sign_links">
 				<%= link_to 'log in',  new_user_session_path%>
-				<%= link_to 'sign up',  new_user_session_path%>
+				<%= link_to 'sign up', new_user_registration_path%>
 			</div>
+<<<<<<< HEAD
 			<% end %>
+=======
+		<% end %>
+>>>>>>> 1cd33fa1674ad4387f38c22e84635f7a87ec2f36
 			<div class="hero_title">
 				<h1>tableplace</h1>
 			</div><!--hero_title-->
@@ -23,7 +31,7 @@
 </header>
 	<div class="index_content">
 		<div class="row">
-			<img src="placeholderimage.png">
+			<%= image_tag("search.jpg", :alt => "search") %>
 			<div class="img_1_text">
 				<h1>Search, join, and create your ideal game</h1>
 				<h3>Whether you want poker at the coffeehouse or empire building at the comic store, we’ll help you find fitting games! Detect meetups close to you that match your needs. Filter games by genre, length, environment, players needed, skill level, and other details. Create meetups in less than a minute with a simple form.</h3>
@@ -34,10 +42,10 @@
 				<h1>Form groups for meetups and announcements.</h1>
 				<h3>Get in groups to put important meetup info in one spot! Join your collectible cards guild or late night role-playing group, among others, to share availability and suggested players. View a group’s game meetups from their page, or find the group through the meetup page. Order and describe past, present, and future meetups.</h3>
 			</div><!--img_2_text-->
-				<img src="placeholderimage.png">
+				<%= image_tag("group.jpg", :alt => "group") %>
 		</div><!--row-->
 		<div class="row">
-			<img src="placeholderimage.png" id="img_1">
+			<%= image_tag("engage.jpg", :alt => "engage") %>
 			<div class="img_1_text">
 				<h1>Engage with players like you</h1>
 				<h3>Express yourself as a player and help others have the most fun possible! Detail your area, profile, and game preferences. Share meetup openings with players who want to join or help run those events. Link meetups, groups, and profiles to other apps.</h3>

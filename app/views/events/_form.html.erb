@@ -10,28 +10,31 @@
       </ul>
     </div>
   <% end %>
+<div class="new_group_container">
+  <div class="new_group">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_area :name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_area :name %>
-  </div>
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+    <div class="field">
+      <%= form.label :start %>
+      <%= form.datetime_select :start %>
+    </div>
 
-  <div class="field">
-    <%= form.label :start %>
-    <%= form.datetime_select :start %>
-  </div>
+    <div class="field">
+      <%= form.label :end %>
+      <%= form.datetime_select :end %>
+    </div>
 
-  <div class="field">
-    <%= form.label :end %>
-    <%= form.datetime_select :end %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div><!--new_group-->
+</div><!--new_group_container-->
