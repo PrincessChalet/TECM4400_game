@@ -22,20 +22,3 @@
   </div>
 </div>
 </div>
-
-<div class="row">
-<%= User.all.each do |each_user| %> 
-  <div class="group_container">
-    <div class="group-box">
-      <ul>
-      <li><%= each_user.email %></li>
-      <li><%= each_user.created_at %></li>
-      <li><%= each_user.username %></li>    
-      </ul>
-       <br />
-    </div>
-    <% end %>
-    </div>
-  </div>
-</div>
-</div>
