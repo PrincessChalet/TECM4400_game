@@ -15,7 +15,7 @@
       <li>User_id: <%= each_group.user_id %></li>
       <li>create date: <%= each_group.create_date %></li>
       <li>description: <%= each_group.description %></li>
-      <li><%= link_to "Join this group", join_group_path(each_group) %>`</li>
+      <li><%= link_to "Join this group", join_group_path(each_group), id: "join_this_group" %>`</li>
        <br />
      </ul>
     </div>
