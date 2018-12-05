@@ -534,17 +534,6 @@ img.group-show{
 	width: 400px;
 	height: auto;
 }
-/*.group-box {
-	padding: 45px;
-	background: #658A5E;
-	border: solid #CFD18E;
-	border-radius: 15px;
-	display: inline-flex;
-	align-items: center;
-	line-height: 35px;
-	width: 1150px;
-	margin: 20px auto;
-}*/
 .group_container {
 	display: block;
 	margin: 0 auto;
@@ -575,7 +564,7 @@ img.group-show{
 	.group-box li:nth-child(6) {
 		margin-bottom: 35px;
 	}
-	.group-box a {
+	#join_this_group {
 		border: none;
 		border-radius: 4px;
 		background: #3E345D;
@@ -587,7 +576,7 @@ img.group-show{
 		text-decoration: none;
 		transition: 0.3s ease;
 	}
-		.group-box a:hover {
+		#join_this_group:hover {
 			background-color: #5f5287;
 		}
 #join {
