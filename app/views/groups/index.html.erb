@@ -2,14 +2,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Groups</h1>
-  <div class="box_container_container">
-      <div class="box_container">
         <div class="group_box">
-          <h3><%= link_to 'Create New Group', new_group_path%></h3>
+          <h3><%= link_to 'create new group', new_group_path%></h3>
         </div><!--group_box-->
-      </div><!--box_container-->
-  </div><!--box_container_container-->
-   <div class="row">
+  <div class="row">
   <% @groups.each do |group| %>
   <div class="group_container">
     <div class="group-box">
@@ -34,9 +30,8 @@
  <% end %>
       </ul>
     </div>
-    <br>
+  </div>
     <% end %>
 </div>
-<br>
-
+</div>
 </div>

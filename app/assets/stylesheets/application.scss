@@ -234,7 +234,18 @@ footer {
 	color: #333233;
 	border: solid 3px #d8d3e8;
 	border-radius: 10px;
-	z-index: 999;
+}
+	.box_container a {
+		text-decoration: none;
+	}
+	.box_container a:hover {
+		color: inherit;
+	}
+.group_box {
+	display: block;
+	height: 130px;
+	width: 400px;
+	margin: 30px auto;
 }
 .group_box h3 {
 	margin: 0 auto;
@@ -243,10 +254,15 @@ footer {
 }
 	.group_box h3 a {
 		text-decoration: none;
+		background: #F0F0F6;
 		color: #333233;
-		display: block;
 		height: 130px;
-		width: 300px;
+		width: 400px;
+		margin: 70px auto;	
+		border: solid 3px #d8d3e8;
+		border-radius: 10px;
+		position: relative;
+		padding: 45px;
 	}
 .new_group {
 	display: flex;
@@ -338,6 +354,7 @@ nav {
 	background-color: #413560;
 	position: fixed;
 	top: 0;
+	z-index: 1;
 }
 nav h1 {
 	padding: 30px 20px;
