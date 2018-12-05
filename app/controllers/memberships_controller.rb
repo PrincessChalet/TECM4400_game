@@ -6,6 +6,7 @@ class MembershipsController < ApplicationController
   # GET /memberships.json
   def index
     @memberships = Membership.all
+    
   end
 
   # GET /memberships/1
@@ -16,7 +17,7 @@ class MembershipsController < ApplicationController
   # GET /memberships/new
   def new
     @group = Group.find params[:group_id]
-      @membership = Membership.new({group: group})
+    @membership = Membership.new({group: group})
   end
 
   # GET /memberships/1/edit
@@ -27,7 +28,7 @@ class MembershipsController < ApplicationController
   # POST /memberships.json
   def create
     @group = Group.find params[:group_id]
-      @membership = Membership.new(membership_params)
+    @membership = Membership.new(membership_params)
     #@membership = Membership.new(membership_params)
     #@membership = current_user.memberships.build(:group_id => params[:group_id])
     #respond_to do |format|

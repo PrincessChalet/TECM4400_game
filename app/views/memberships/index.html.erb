@@ -26,4 +26,29 @@
 
 <br>
 
+<%= User.all.each do |each_user| %> 
+    <div class="group_container">
+  <%= each_user.email %>      <div class="group-box">
+  <%= link_to "Join this group", join_group_path(each_user) %>`       <ul>
+   <br />      
+      <li><%= each_user.email %></li>
+      <li><%= each_user.created_at %></li>
+      <li><%= each_user.username %></li>  
+      </ul>
+       <br />
+    </div>
+    <% end %>
+
+<%= Group.all.each do |group| %> 
+    <div class="group_container">
+    <div class="group-box">
+  <%= link_to "Join this group", join_group_path(group) %>`       <ul>
+   <br />      
+      <li><%= group.name %></li>
+      </ul>
+       <br />
+    </div>
+    <% end %>
+
+
 <%= link_to 'New Membership', new_membership_path %>
