@@ -23,28 +23,16 @@
           <strong>Experience level:</strong>
           <%= @group.experience_level %>
         </p>
-
-        <p>
-          <strong>User:</strong>
-          <%= @group.user_id %>
-        </p>
         
-        <p>
-          <strong>Create date:</strong>
-          <%= @group.create_date %>
-        </p>
-
         <p>
           <strong>Description:</strong>
           <%= @group.description %>
         </p>
       </div><!--group_info-->
-    
-         Events
-        </h1>
+    <% if @events.any? %>
+         <h5>Events</h5>
         <% @events.each do |event| %>
 
-        <h5>
           <ul>
           <li><%= event.name %></li>
           <li><%= event.description %></li>
@@ -52,7 +40,7 @@
           <li><%= event.end %></li>
 
         <% end %>
-        </h5>
+    <% end %>
 
 
     </div><!--new_group-->
