@@ -225,7 +225,6 @@ footer {
 }
 .box_container {
 	display: flex;
-	flex-direction: vertical;
 	align-items: center;
 	justify-content: center;
 	margin: 70px auto;
@@ -235,6 +234,7 @@ footer {
 	color: #333233;
 	border: solid 3px #d8d3e8;
 	border-radius: 10px;
+	z-index: 999;
 }
 .group_box h3 {
 	margin: 0 auto;
@@ -541,7 +541,7 @@ img.group-show{
 .group_container {
 	display: block;
 	margin: 0 auto;
-	width: 1050px;
+	width: auto;
 }
 .group-box {
 	padding: 10px;
@@ -552,7 +552,7 @@ img.group-show{
 	justify-content: center;
 	align-items: center;
 	line-height: 35px;
-	width: 1050px;
+	width: 1100px;
 	margin: 30px auto;
 }
 	.group-box p {
