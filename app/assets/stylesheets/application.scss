@@ -268,7 +268,6 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	padding: 45px;
 	height: auto;
 	width: auto;
@@ -279,6 +278,19 @@ footer {
 .new_group label, .new_group a {
 	color: #3E345D;
 }
+.cancel {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+	.cancel p {
+		margin-bottom: 8px;
+	}
+	.cancel input {
+		margin-bottom: 11px;
+	}
 
 .container h1 {
 	color: #E2F9D5;
