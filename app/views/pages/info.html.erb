@@ -3,10 +3,14 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="tp.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body id="info_body">
 <header>
 	<div class="hero">
+		<div class="hero_title">
+				<h1>tableplace</h1>
+		</div><!--hero_title-->
 		<h2>Set up your next tabletop adventure</h2>
 		<div class="hero_right_content">
 			<% if !user_signed_in? %>
@@ -15,9 +19,6 @@
 				<%= link_to 'sign up', new_user_registration_path%>
 			</div>
 			<% end %>
-			<div class="hero_title">
-				<h1>tableplace</h1>
-			</div><!--hero_title-->
 		</div><!--hero_right_content-->
 	</div><!--hero-->
 </header>
@@ -52,7 +53,7 @@
 	</div>
 	<% end %>
 <footer>
-		
+		<h2>© 2018 tableplace</h2>
 </footer>
 </body>
 </html>
