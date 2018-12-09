@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-<h1> My Groups </h1>
+<h1 class="my_groups"> My Groups </h1>
 <% @groups.each do |group| %>
   <div class="group_container">
     <div class="group-box">
@@ -11,7 +11,7 @@
       <% end %>
       <ul>
       <li><%= group.name %></li>
-      <Li><%= group.catageory %></Li>
+      <li><%= group.catageory %></li>
       <li><%= group.experience_level %><li>
       <li><%= group.description %></li>
   </div>

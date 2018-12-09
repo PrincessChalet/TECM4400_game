@@ -7,18 +7,16 @@
 <body id="info_body">
 <header>
 	<div class="hero">
+		<div class="hero_title">
+				<h1>tableplace</h1>
+		</div><!--hero_title-->
 		<h2>Set up your next tabletop adventure</h2>
-		<div class="hero_right_content">
 			<% if !user_signed_in? %>
 			<div class="top_log_sign_links">
 				<%= link_to 'log in',  new_user_session_path%>
 				<%= link_to 'sign up', new_user_registration_path%>
 			</div>
 			<% end %>
-			<div class="hero_title">
-				<h1>tableplace</h1>
-			</div><!--hero_title-->
-		</div><!--hero_right_content-->
 	</div><!--hero-->
 </header>
 	<div class="index_content">
@@ -52,7 +50,7 @@
 	</div>
 	<% end %>
 <footer>
-		
+		<h2>© 2018 tableplace</h2>
 </footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
       <% end %>
       <ul>
       <li><%= group.name %></li>
-      <Li><%= group.catageory %></Li>
-      <li><%= group.experience_level %><li>
-      <li><%= group.description %></li>
+      <li><strong>Category: </strong><%= group.catageory %></li>
+      <li><strong>Experience Level: </strong><%= group.experience_level %><li>
+      <li><strong>Description: </strong><%= group.description %></li>
       
   <% if (user_signed_in?) %>  
   <p id="join"><%= link_to "Join this group", join_group_path(group) %></p>

@@ -22,11 +22,11 @@ html {
 body {
 	background-color: #e6e2eb;/*#F0F0F6;*/ /*#77657a;*/ /*OR #776a7a;*/
 background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	width: 100%;
 	height: 100%;
 	padding-top: 80px;
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 #info_body {
 	background-color: #f7f7f7;
@@ -34,44 +34,43 @@ background-image: url("https://www.transparenttextures.com/patterns/bright-squar
 }
 p {
 	color: #3E345D;
+	font-family: "Roboto", sans-serif;
 }
 a {
 	color: #3E345D;
+	font-family: "Roboto", sans-serif;
+}
+h1, h2, h3, input, h4, li, ul {
+	font-family: "Roboto", sans-serif;
 }
 /*info page*/
 .hero {
-	height: 650px;
+	height: 690px;
 	width: 100%;
-	background-image: linear-gradient(0deg,rgba(255,255,255,0.7),rgba(90,112,237,0.4)), url(game_hero_image.jpg);
+	background-image: linear-gradient(to top left,rgba(255,255,255,.3),rgba(90,112,237,0.4)), url(game_hero_image.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	margin-bottom: 40px;
 	display: block;
 }
 .hero_title h1 {
 	color: #E2F9D5;
-	text-shadow: 1px 1px 5px #3E345D;
-	font-size: 165px;
+	font-size: 105px;
+	margin: auto 50px 20px 70px;
+	padding-top: 200px;
 }
 .hero h2 {
-	width: 40%;
-	float: left;
-	margin-top: 125px;
-	margin-left: 40px;
 	padding: none;
-	font-size: 90px;
+	font-size: 45px;
 	color: #f7f7f7;
-	text-shadow: 1px 1px 7px #3E345D;
-}
-.hero_right_content {
-	float: right;
-	width: 55%;
-	margin-top: 100px;
+	margin-left: 70px;
+	margin-bottom: 15px;
+	font-weight: 200;
 }
 .top_log_sign_links {
-	float: right;
-	margin-right: 100px;
-	margin-bottom: 180px;
+	position: relative;
+	display: block;
+	float: left;
+	margin: 33px 33px 33px 53px;
 }
 	.top_log_sign_links a {
 		padding: 10px 18px;
@@ -87,36 +86,42 @@ a {
 		height: 30px;
 	}
 .row img {
-	height: 380px;
-	width: 660px;
-	margin: 0 40px;
-	display: cover;
+	height: 100%;
+	width: 50%;
+	margin: 0;
+	object-fit: cover;
 }
 .img_1_text {
-	font-size: 25px;
-	width: 50%;
-	margin-left: 15px;
+	width: 45%;
+	padding: 30px 55px;
+	margin: 0 auto;
+	display: block;
 }
 	.img_1_text h1, .img_2_text h1 {
 		color: #3E345D;
 		margin-bottom: 30px;
+		font-size: 30px;
+		font-weight: 200;
+		letter-spacing: 1px;
 	}
 	.img_1_text h3, .img_2_text h3 {
 		color: #484C52;
-		line-height: 50px;
-		font-weight: 400;
-		font-family: Arial, sans-serif;
+		line-height: 35px;
+		font-weight: 200;
+		font-size: 23px;
+		font-family: "Roboto", sans-serif;
 	}
 .img_2_text {
-	font-size: 25px;
-	width: 50%;
-	margin-right: 15px;
+	width: 45%;
+	padding: 0 55px;
+	margin: 0 auto;
+	display: block;
 }
 .row {
 	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
 	height: 500px;
@@ -164,10 +169,18 @@ footer {
 	height: 400px;
 	width: 100%;
 	background: #3E345D;
+	color: #fff;
 	margin-top: 75px;
 	bottom: 0;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+	footer h2 {
+			font-weight: 200;
+
+	}
 /*info page*/
 
 #home h1 {
@@ -573,6 +586,7 @@ input#group_image {
 img.group-show{
 	width: 400px;
 	height: auto;
+	margin-bottom: 30px;
 }
 .group_container {
 	display: block;
@@ -641,12 +655,12 @@ img.group-show{
 	color: #3E345D;
 }
 
-img.group-index{
+img.group-index {
 	display: cover;
-	max-width: 500px;
-	max-height: 500px;
-	/*border: solid #3E345D;*/
+	width: 500px;
+	height: 300px;
 	border-radius: 15px;
+	margin: 20px auto;
 }
 
 .group-box ul {
@@ -662,5 +676,11 @@ img.group-index{
 	color: #3E345D;
 }
 .group-box li:nth-of-type(2) {
-	font-weight: 700;
+}
+.my_groups {
+	text-align: center;
+	display: block;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
 }
