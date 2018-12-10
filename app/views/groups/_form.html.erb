@@ -12,6 +12,7 @@
   <% end %>
 
   <div class ="form-control-group">
+    <%= form.label :group_image %> <br />
     <%= form.file_field :image %>
     <% if @group.image? %>
       <%= image_tag @group.image.url, class: "group-show" %>
