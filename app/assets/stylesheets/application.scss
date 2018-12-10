@@ -50,36 +50,21 @@ h1, h2, h3, h4, p, a, li, input {
 .hero {
 	height: 690px;
 	width: 100%;
-<<<<<<< HEAD
-	background-image: linear-gradient(to top left,rgba(255,255,255,.3),rgba(90,112,237,0.4)), url(game_hero_image.jpg);
-=======
 	background-image: linear-gradient(to top left,rgba(255,255,255,0.3),rgba(90,112,237,0.4)), url(game_hero_image.jpg);
->>>>>>> Aaron
 	background-size: cover;
 	background-attachment: fixed;
 	display: block;
 }
 .hero_title h1 {
 	color: #E2F9D5;
-<<<<<<< HEAD
 	font-size: 105px;
 	margin: auto 50px 20px 70px;
 	padding-top: 200px;
-}
-.hero h2 {
-	padding: none;
-	font-size: 45px;
-	color: #f7f7f7;
-	margin-left: 70px;
-	margin-bottom: 15px;
-	font-weight: 200;
 }
 .top_log_sign_links {
 	position: relative;
 	display: block;
 	float: left;
-	margin: 33px 33px 33px 53px;
-=======
 	font-size: 100px;
 	padding-top: 200px;
 	margin-left: 50px;
@@ -97,7 +82,6 @@ h1, h2, h3, h4, p, a, li, input {
 }
 .top_log_sign_links {
 	margin: 60px 30px;
->>>>>>> Aaron
 }
 	.top_log_sign_links a {
 		padding: 10px 18px;
@@ -115,41 +99,25 @@ h1, h2, h3, h4, p, a, li, input {
 .row img {
 	height: 100%;
 	width: 50%;
-<<<<<<< HEAD
 	margin: 0;
 	object-fit: cover;
-}
-.img_1_text {
-	width: 45%;
-	padding: 30px 55px;
-	margin: 0 auto;
-	display: block;
-=======
-	display: cover;
 }
 .img_1_text {
 	font-size: 25px;
 	width: 50%;
 	padding: 50px;
->>>>>>> Aaron
 }
 	.img_1_text h1, .img_2_text h1 {
 		color: #3E345D;
 		margin-bottom: 30px;
-<<<<<<< HEAD
-		font-size: 30px;
-		font-weight: 200;
 		letter-spacing: 1px;
-=======
 		font-weight: 200;
 		font-size: 40px;
->>>>>>> Aaron
 	}
 	.img_1_text h3, .img_2_text h3 {
 		color: #484C52;
 		line-height: 35px;
 		font-weight: 200;
-<<<<<<< HEAD
 		font-size: 23px;
 		font-family: "Roboto", sans-serif;
 	}
@@ -158,15 +126,11 @@ h1, h2, h3, h4, p, a, li, input {
 	padding: 0 55px;
 	margin: 0 auto;
 	display: block;
-=======
-		font-size: 20px;
-		font-family: "Roboto", sans-serif;
 	}
 .img_2_text {
 	font-size: 25px;
 	width: 50%;
 	padding: 50px;
->>>>>>> Aaron
 }
 .row {
 	display: inline-flex;
@@ -229,13 +193,8 @@ footer {
 	justify-content: center;
 }
 	footer h2 {
-<<<<<<< HEAD
-			font-weight: 200;
-
-=======
 		color: #fff;
 		font-weight: 200;
->>>>>>> Aaron
 	}
 /*info page*/
 
