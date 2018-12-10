@@ -61,19 +61,9 @@ h1, h2, h3, h4, p, a, li, input {
 	margin: auto 50px 20px 70px;
 	padding-top: 200px;
 }
-.top_log_sign_links {
-	position: relative;
-	display: block;
-	float: left;
-	font-size: 100px;
-	padding-top: 200px;
-	margin-left: 50px;
-	margin-bottom: 20px;
-	font-family: "Roboto", sans-serif;
-}
 .hero h2 {
 	width: 100%;
-	margin-left: 50px;
+	margin-left: 70px;
 	margin-bottom: 20px;
 	padding: none;
 	font-weight: 200;
@@ -81,7 +71,12 @@ h1, h2, h3, h4, p, a, li, input {
 	color: #f7f7f7;
 }
 .top_log_sign_links {
-	margin: 60px 30px;
+	position: relative;
+	display: block;
+	font-size: 100px;
+	font-family: "Roboto", sans-serif;
+	margin: 30px 50px;
+	line-height: 0.5;
 }
 	.top_log_sign_links a {
 		padding: 10px 18px;
